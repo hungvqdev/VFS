@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VFS</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/swiper-bundle.min.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="image/logo.png" alt="Logo" />
+      </div>
+      <div class="header-buttons">
+        <a href="#" class="btn btn-login">
+          <svg
+            class="svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="9"
+              r="3"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></circle>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></circle>
+            <path
+              d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+          Đăng Nhập
+        </a>
+        <a href="#" class="btn btn-register">
+          <svg
+            class="svg"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M480,1117 C472.268,1117 466,1110.73 466,1103 
+           C466,1095.27 472.268,1089 480,1089 
+           C487.732,1089 494,1095.27 494,1103 
+           C494,1110.73 487.732,1117 480,1117 
+           L480,1117 Z M480,1087 
+           C471.163,1087 464,1094.16 464,1103 
+           C464,1111.84 471.163,1119 480,1119 
+           C488.837,1119 496,1111.84 496,1103 
+           C496,1094.16 488.837,1087 480,1087 
+           L480,1087 Z M486,1102 
+           L481,1102 L481,1097 
+           C481,1096.45 480.553,1096 480,1096 
+           C479.447,1096 479,1096.45 479,1097 
+           L479,1102 L474,1102 
+           C473.447,1102 473,1102.45 473,1103 
+           C473,1103.55 473.447,1104 474,1104 
+           L479,1104 L479,1109 
+           C479,1109.55 479.447,1110 480,1110 
+           C480.553,1110 481,1109.55 481,1109 
+           L481,1104 L486,1104 
+           C486.553,1104 487,1103.55 487,1103 
+           C487,1102.45 486.553,1102 486,1102 
+           L486,1102 Z"
+              transform="translate(-464 -1087)"
+            ></path>
+          </svg>
+          Mở Tài Khoản
+        </a>
+      </div>
+    </header>
+    <section id="hero">
+      <div class="swiper" style="height: 100%">
+        <div class="swiper-hero">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  srcset="image/hero/hero1-mobile.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="image/hero/hero1.png" alt="Hero 1" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  srcset="image/hero/hero2-mobile.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="image/hero/hero2.png" alt="Hero 1" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  srcset="image/hero/hero3-mobile.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="image/hero/hero3.png" alt="Hero 1" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-header">
+        <h3>CHÚNG TÔI LÀ</h3>
+        <h2>CHỨNG KHOÁN NHẤT VIỆT (VFS)</h2>
+        <div class="straight-line"></div>
+        <p>
+          Thành lập từ năm 2008, Chứng khoán Nhất Việt (VFS) là một trong số
+          những đơn vị chứng khoán có mặt sớm và hoạt động lâu năm trên thị
+          trường. Với tiềm lực tài chính vững mạnh, VFS tự hào là đơn vị tiên
+          phong cung cấp các dịch vụ & giải pháp đầu tư tài chính được “may đo”
+          linh hoạt phù hợp với mọi đối tượng khách hàng.
+        </p>
+      </div>
+      <div class="container about-content">
+        <div class="about-content-left">
+          <img src="image/about.png" alt="About" />
+        </div>
+        <div class="about-content-right">
+          <div class="about-grid">
+            <div class="about-box">
+              <img
+                src="image/icons/users.svg"
+                class="about-grid-icon"
+                alt="users"
+              />
+              <div>
+                <h2>10.000+</h2>
+                <p>Tổng số khách hàng đang phục vụ</p>
+              </div>
+            </div>
+            <div class="about-box">
+              <img
+                src="image/icons/handshake.svg"
+                class="about-grid-icon"
+                alt="handshake"
+              />
+              <div>
+                <h2>150+</h2>
+                <p>Đói tác phục vụ</p>
+              </div>
+            </div>
+            <div class="about-box">
+              <div class="about-grid-icon" style="flex-shrink: 0">
+                <img
+                  src="image/icons/hourglass.svg"
+                  style="width: 40px"
+                  alt="hourglass"
+                />
+              </div>
+
+              <div>
+                <h2>17 năm</h2>
+                <p>Hoạt động trong ngành tài chính chứng khoản</p>
+              </div>
+            </div>
+            <div class="about-box">
+              <img
+                src="image/icons/trade.svg"
+                class="about-grid-icon"
+                alt="trade"
+              />
+              <div>
+                <h2>51%</h2>
+                <p>Doanh thu tăng trưởng hàng năm</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-flex">
+            <img src="image/icons/evn.png" class="about-flex-icon" alt="EVN" />
+            <img
+              src="image/icons/kienlongbank.png"
+              class="about-flex-icon"
+              alt="Kienlong Bank"
+            />
+            <div class="msb"><img src="image/icons/msb.png" alt="MSB" /></div>
+
+            <img
+              src="image/icons/vietinbank.png"
+              class="about-flex-icon"
+              style="padding-top: 10px"
+              alt="Viettin Bank"
+            />
+            <img
+              src="image/icons/vinataba.png"
+              class="about-flex-icon"
+              alt="Vinataba"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="container">
+        <div class="benefits-header">
+          <img src="image/logo2.png" alt="" />
+          <div>
+            <h3>LỢI ÍCH</h3>
+            <h2>CHỌN NHẤT VIỆT<br />CHỌN ĐỐI TÁC ĐỒNG HÀNH BỀN VỮNG</h2>
+          </div>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <img src="image/icons/hand-cog.svg" alt="hand-cog" />
+
+            <h4>Sản phẩm “may đo” theo từng phong cách đầu tư</h4>
+            <p>
+              “May đo” theo từng phong cách và hành trình đầu tư, chúng tôi mang
+              đến những giải pháp vừa vặn, phù hợp với nhu cầu Khách hàng ở từng
+              giai đoạn.
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <img src="image/icons/dollar.svg" alt="Dollar" />
+
+            <h4 style="height: 50px">Tiềm lực tài chính vững vàng</h4>
+            <p>
+              VFS là một trong các công ty chứng khoán có tốc độ tăng trưởng
+              doanh thu nhanh nhất, trung bình đạt 39,8%/năm (từ 2021 - nay)...
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <img src="image/icons/coin.svg" alt="coin" />
+
+            <h4 style="height: 50px">Phí và lãi suất cạnh tranh</h4>
+            <p>
+              VFS có mức phí giao dịch cùng lãi suất vay cạnh tranh tốt hàng đầu
+              thị trường...
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <img src="image/icons/award.svg" alt="award" />
+            <h4 style="height: 50px">Đội ngũ chuyên gia tư vấn đồng hành</h4>
+            <p>
+              VFS sở hữu đội ngũ chuyên gia tư vấn đồng hành trong toàn bộ quá
+              trình đầu tư...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="promo">
+      <div class="promo-content">
+        <h3>QUÀ TẶNG BẠN MỚI</h3>
+        <h2>ĐẦU TƯ THÔNG MINH<br />ĐÓN SÓNG TÀI CHÍNH CÙNG VFS</h2>
+        <div class="straight-line" style="margin: 10px 0; height: 2px"></div>
+
+        <div class="promo-box">
+          <div style="text-align: right">
+            <div class="text">MỞ TÀI KHOẢN</div>
+            <div class="money">50K</div>
+          </div>
+          <div class="white-line"></div>
+          <div>
+            <div class="money">50K</div>
+            <div class="text">GIAO DỊCH LẦN ĐẦU</div>
+          </div>
+        </div>
+        <button class="btn-parallelogram"><span>TẢI APP NGAY</span></button>
+      </div>
+    </section>
+    <section id="products">
+      <div class="container">
+        <div class="product-header">
+          <h3>VFS INVEST 2025</h3>
+          <h2>BỘ SẢN PHẨM ĐỒNG HÀNH TĂNG TRƯỞNG TÀI CHÍNH</h2>
+          <div class="straight-line"></div>
+        </div>
+        <div class="products-grid container">
+          <article
+            class="product-card openModal"
+            style="
+              --img-default: url('../image/products/product1.png');
+              --img-hover: url('../image/products/bg-product.png');
+            "
+            data-target="tpl1"
+          >
+            <div class="line"></div>
+            <div class="content">
+              <h3>VFS WELCOME</h3>
+              <p>Tặng đến 100.000đ dành cho khách hàng mới</p>
+              <button>Xem thêm →</button>
+            </div>
+          </article>
+
+          <article
+            class="product-card openModal"
+            style="
+              --img-default: url('../image/products/product2.png');
+              --img-hover: url('../image/products/bg-product.png');
+            "
+            data-target="tpl2"
+          >
+            <div class="line"></div>
+            <div class="content">
+              <h3>VFS ACTIVE</h3>
+              <p>Ưu đãi phí chỉ 0.8% dành cho khách hàng giao dịch trở lại</p>
+              <button>Xem thêm →</button>
+            </div>
+          </article>
+          <article
+            class="product-card openModal"
+            style="
+              --img-default: url('../image/products/product3.png');
+              --img-hover: url('../image/products/bg-product.png');
+            "
+            data-target="tpl3"
+          >
+            <div class="line"></div>
+            <div class="content">
+              <h3>VFS KEEP</h3>
+              <p>Không lo về lãi - Đầu tư vững chãi với gói vay Margin 0%!</p>
+              <button>Xem thêm →</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="intro">
+      <div class="intro-title-1">
+        <h2 style="text-align: center">BẠN LÀ KHÁCH HÀNG MỚI?</h2>
+        <div class="description-intro">
+          <p>MỞ TÀI KHOẢN ĐỂ GIAO DỊCH NGAY SAU 5 PHÚT</p>
+          <p>CẬP NHẬT LIÊN TỤC CÁC BẢN TIN TƯ VẤN ĐẦU TƯ & NHẬN NHIỀU ƯU ĐÃI</p>
+        </div>
+      </div>
+
+      <div class="desktop container">
+        <div
+          class="intro-content"
+          style="grid-template-columns: repeat(5, 1fr)"
+        >
+          <img src="image/intro/intro1.png" alt="" />
+          <img src="image/intro/intro2.png" alt="" />
+          <img src="image/intro/intro3.png" alt="" />
+          <img src="image/intro/intro4.png" alt="" />
+          <img src="image/intro/intro5.png" alt="" />
+        </div>
+        <div
+          class="intro-content intro-content-des"
+          style="margin-bottom: 40px; grid-template-columns: repeat(5, 1fr)"
+        >
+          <div style="padding: 20px 0px 5px 5px">
+            <span class="parent-icons-intro">01</span>
+
+            <p>Tải ứng dụng VFS Mobile</p>
+          </div>
+          <div style="padding: 20px 0px 5px 5px; width: 70%">
+            <span class="parent-icons-intro">02</span>
+            <p>Truy cập ứng dụng & chọn mở tài khoản</p>
+          </div>
+          <div style="padding: 20px 0px 5px 5px">
+            <span class="parent-icons-intro">03</span>
+            <p>Hoàn thiện thông tin cá nhân</p>
+          </div>
+          <div style="padding: 20px 10px 5px 10px">
+            <span class="parent-icons-intro">04</span>
+            <p>Ký hợp đồng điện tử</p>
+          </div>
+          <div style="padding: 20px 5px 5px 5px">
+            <span class="parent-icons-intro">05</span>
+            <p>Giao dịch ngay</p>
+          </div>
+        </div>
+      </div>
+      <div class="mobile">
+        <div
+          class="intro-content"
+          style="grid-template-columns: repeat(2, 1fr)"
+        >
+          <img src="image/intro/intro1.png" width="120" alt="" />
+          <img src="image/intro/intro2.png" width="120" alt="" />
+        </div>
+        <div
+          class="intro-content intro-content-des"
+          style="
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 0 !important;
+          "
+        >
+          <div>
+            <span class="parent-icons-intro" style="top: -2px">01</span>
+          </div>
+          <div>
+            <span class="parent-icons-intro" style="top: -2px">02</span>
+          </div>
+        </div>
+        <div
+          class="intro-content intro-content-des"
+          style="
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px !important;
+            margin-top: 0 !important;
+          "
+        >
+          <div style="padding: 20px 5px 5px 12px; width: 167px !important">
+            <p>Tải ứng dụng VFS Mobile</p>
+          </div>
+          <div style="padding: 20px 12px 5px 5px; width: 167px !important">
+            <p>Truy cập ứng dụng & chọn mở tài khoản</p>
+          </div>
+        </div>
+
+        <div
+          class="intro-content"
+          style="grid-template-columns: repeat(3, 1fr)"
+        >
+          <img src="image/intro/intro3.png" width="120" alt="" />
+          <img src="image/intro/intro4.png" width="120" alt="" />
+          <img src="image/intro/intro5.png" width="120" alt="" />
+        </div>
+        <div
+          class="intro-content intro-content-des"
+          style="margin-bottom: 40px; grid-template-columns: repeat(3, 1fr)"
+        >
+          <div style="padding: 20px 0px 5px 5px">
+            <span class="parent-icons-intro">03</span>
+            <p>Hoàn thiện thông tin cá nhân</p>
+          </div>
+          <div style="padding: 20px 10px 5px 10px">
+            <span class="parent-icons-intro">04</span>
+            <p>Ký hợp đồng điện tử</p>
+          </div>
+          <div style="padding: 20px 5px 5px 5px">
+            <span class="parent-icons-intro">05</span>
+            <p>Giao dịch ngay</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-qr">
+        <div class="intro-title-2">
+          <h2>TRẢI NHIỆM MOBILE APP VFS</h2>
+          <div class="description2-intro">
+            <p>
+              Ứng dụng thân thiệt giúp nhà đầu tư theo dõi thị trường & giao
+              dịch dễ dàng
+            </p>
+          </div>
+          <div>
+            <img src="image/icons/chplay.svg" width="130" alt="QR" />
+            <img src="image/icons/appstore.svg" width="130" alt="QR" />
+          </div>
+        </div>
+        <div>
+          <img src="image/intro/qr.jpg" width="280" alt="QR" />
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="form-box">
+        <h3>NẾU CẦN THÊM THÔNG TIN</h3>
+        <p>VUI LÒNG ĐỂ LẠI THÔNG TIN, CHÚNG TÔI SẼ HỖ TRỢ BẠN</p>
+
+        <form>
+          <input type="text" placeholder="Họ Và Tên" />
+          <input type="tel" placeholder="Số Điện Thoại" />
+          <input type="text" placeholder="Sản phẩm cần tư vấn" />
+          <button type="submit">GỬI</button>
+        </form>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="footer-desktop">
+        <div class="container">
+          <div class="footer-content">
+            <!-- Bên trái -->
+            <div class="footer-left">
+              <div class="logo">
+                <img src="image/logo.png" alt="Logo" />
+              </div>
+              <h3>Công ty Cổ phần chứng khoán Nhất Việt (VPS)</h3>
+              <div class="info">
+                <div>
+                  <img src="image/icons/home.svg" alt="Home" class="icon" />Hội
+                  Sở Chính
+                </div>
+                <p>
+                  Lầu 15, số 117 - 119 - 121 Nguyễn Du, P. Bến Thành, Quận 1, TP
+                  HCM
+                </p>
+                <div>
+                  <img
+                    src="image/icons/phone.svg"
+                    alt="Phone"
+                    class="icon"
+                  />Hotline: (84.28) 6255 6566
+                </div>
+              </div>
+
+              <div class="info">
+                <div>
+                  <img src="image/icons/home.svg" alt="Home" class="icon" />Chi
+                  Nhánh Hà Nội
+                </div>
+                <p>
+                  Tầng 5, Số 87 Bà Triệu, P. Hàng Bài, Q. Hoàn Kiếm, TP Hà Nội
+                </p>
+                <div>
+                  <img
+                    src="image/icons/phone.svg"
+                    alt="Phone"
+                    class="icon"
+                  />Hotline: (84.24) 3 9288 222
+                </div>
+              </div>
+            </div>
+
+            <!-- Bên phải -->
+            <div class="footer-right">
+              <div class="mail">
+                <div class="box">
+                  <img src="image/icons/mail.svg" alt="Mail" class="icon" />
+                </div>
+                <div>
+                  <p>Mail</p>
+                  <p>customercare@vfs.com.vn</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Templates ẩn -->
+    <template id="tpl1">
+      <div id="vfs-template">
+        <picture>
+          <source
+            srcset="image/hero/hero1-mobile.jpg"
+            media="(max-width: 768px)"
+          />
+          <img src="image/hero/hero1.png" alt="Hero 1" />
+        </picture>
+        <h1>VFS Welcome - Bùng Nổ Ưu Đãi Chào Đón Nhà Đầu Tư Mới</h1>
+        <p class="subtitle">
+          Cơ hội nhận tới <span class="highlight">500.000 VND</span> khi mở tài
+          khoản mới hay chuyển tài khoản về VFS, tiếp sức cho các nhà đầu tư
+          ngay từ những bước đầu tiên chinh phục thị trường.
+        </p>
+
+        <!-- ƯU ĐÃI KHÁCH HÀNG MỚI -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Ưu Đãi Dành
+            Riêng Cho Khách Hàng Mới
+          </h2>
+          <ul>
+            <li class="li-plus">
+              Nhận ngay <span class="highlight">50.000 VND</span> khi mở tài
+              khoản mới thành công
+            </li>
+            <li class="li-plus">
+              Nhận ngay <span class="highlight">50.000 VND</span> khiphát sinh
+              giao dịch lần đâu tiên
+            </li>
+            <li class="li-plus">Thời gian áp dụng</li>
+            <ul>
+              <li>
+                Mở tài khoản mới từ
+                <span class="highlight">18/7/2025 đến 31/10/2025</span>
+              </li>
+              <li>
+                Giao dịch hợp lệ từ
+                <span class="highlight">18/7/2025 đến 31/10/2025</span>
+              </li>
+            </ul>
+          </ul>
+        </div>
+
+        <!-- CHUYỂN TÀI KHOẢN -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Chuyển Tài
+            Khoản – Thêm Ưu Đãi Gắn Bó Lâu Dài
+          </h2>
+          <ul>
+            <li class="li-plus">
+              Khách hàng chuyển tài khoản về VFS sẽ được tặng ngay tiền mặt vào
+              tài khoản dựa trên <strong>giá trị tài sản ròng (NAV)</strong> tại
+              thời điểm chuyển về với các mức thưởng hấp dẫn:
+            </li>
+            <ul>
+              <li>
+                Tặng ngay <span class="highlight">100.000 VND</span> với mức NAV
+                từ 300 triệu đến 500 triệu
+              </li>
+              <li>
+                Tặng ngay <span class="highlight">200.000 VND</span> với mức NAV
+                từ trên 500 triệu đến 1 tỷ VND
+              </li>
+              <li>
+                Tặng ngay <span class="highlight">500.000 VND</span> với mức NAV
+                trên 1 tỷ VND
+              </li>
+            </ul>
+            <li class="li-plus">
+              Thời gian áp dụng:
+              <span class="highlight">18/7/2025 đến 31/10/2025</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- HƯỚNG DẪN -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Hướng Dẫn Nhận
+            Ưu Đãi
+          </h2>
+          <ul>
+            <li class="li-no-dot"><strong>Dành cho khách hàng mới</strong></li>
+            <ul>
+              <li>
+                Tải ứng dụng <span class="highlight">VFS Mobile</span> và mở tài
+                khoản
+              </li>
+              <li>Phát sinh giao dịch để nhận thưởng</li>
+            </ul>
+          </ul>
+          <ul>
+            <li class="li-no-dot">
+              <strong>Dành cho khách hàng chuyển tài</strong>
+            </li>
+
+            <ul>
+              <li>
+                Khách hàng liên hệ bộ phận
+                <strong>DVKH tại công ty chứng khoán hiện tại</strong> để làm
+                thủ tục chuyển tài khoản chứng khoán về VFS
+              </li>
+              <li>
+                Thông báo với bộ phận <strong>DVKH tại VFS</strong> để xác nhận
+                thông tin và nhận thưởng
+              </li>
+            </ul>
+          </ul>
+        </div>
+
+        <!-- LƯU Ý -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Lưu Ý Quan
+            Trọng
+          </h2>
+          <ul>
+            <li class="li-plus">
+              VFS sẽ chuyển thưởng trực tiếp vào tài khoản chứng khoán khi đủ
+              điều kiện
+            </li>
+            <li class="li-plus">
+              Tài khoản hợp lệ đủ điều kiện chi thưởng là tài khoản đã hoàn tất
+              ký hợp đồng điện tử và không có hành vi gian lận
+              <br />
+              Mỗi khách hàng mới chỉ được nhận thưởng một lần trong thời gian
+              chương trình
+            </li>
+          </ul>
+        </div>
+
+        <!-- LIÊN HỆ -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Liên Hệ Hỗ Trợ
+          </h2>
+          <div class="contact">
+            <ul>
+              <li class="li-plus"><strong>Hội sở Hồ Chí Minh</strong></li>
+              <ul>
+                <li><strong>Hotline:</strong> (+84 28) 6255 6586</li>
+                <li>
+                  <strong>Địa chỉ:</strong> Lầu 1, Số 117-119-121 Nguyễn Du, P.
+                  Bến Thành, TP. Hồ Chí Minh
+                </li>
+              </ul>
+              <li class="li-plus"><strong>Chi nhánh Hà Nội</strong></li>
+              <ul>
+                <li><strong>Hotline:</strong> (+84 24) 3 9288 222</li>
+                <li>
+                  <strong>Địa chỉ:</strong> Tầng 5, Số 37 Bà Triệu, P. Hàng Bài,
+                  Hà Nội
+                </li>
+              </ul>
+              <li class="li-no-dot">
+                <strong>Email:</strong> customercare@vfs.com.vn
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <h2>Quét mã để tải app ngay</h2>
+        <div style="margin: 10px 0">
+          <img src="image/icons/chplay.svg" width="130" alt="QR" />
+          <img src="image/icons/appstore.svg" width="130" alt="QR" />
+        </div>
+
+        <div>
+          <img src="image/intro/qr.jpg" width="280" alt="QR" />
+        </div>
+      </div>
+    </template>
+
+    <template id="tpl2">
+      <div id="vfs-template">
+        <picture>
+          <source
+            srcset="image/hero/hero2-mobile.jpg"
+            media="(max-width: 768px)"
+          />
+          <img src="image/hero/hero2.png" alt="Hero 2" />
+        </picture>
+        <h1>VFS ACTIVE - GIAO DỊCH NGAY QUA LIÊN TAY</h1>
+        <p class="subtitle">
+          Quà tặng cùng chính sách phí hấp dẫn dành riêng cho các khách hàng
+          quay lại giao dịch, thêm động lực để tự tin nắm bắt cơ hội và tối ưu
+          hóa lợi nhuận!
+        </p>
+
+        <!-- ƯU ĐÃI KHÁCH HÀNG MỚI -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" />
+            Quà tặng dành riêng cho khách hàng giao dịch lần đầu tiên
+          </h2>
+          <ul>
+            <li class="li-no-dot">
+              Tặng ngay <strong>50.000đ</strong> vào tài khoản chứng khoán cho
+              tất cả các khách hàng có giao dịch chứng khoán cơ sở đầu tiên tại
+              VFS
+            </li>
+            <li class="li-no-dot">Thời gian áp dụng</li>
+            <ul>
+              <li>
+                Mở tài khoản mới từ
+                <span class="highlight">18/1/2025 đến 31/10/2025</span>
+              </li>
+              <li>
+                Giao dịch hợp lệ từ
+                <span class="highlight">18/7/2025 đến 31/10/2025</span>
+              </li>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" />
+            Giao dịch trở lại - Ưu đãi đột phá
+          </h2>
+          <ul>
+            <li class="li-plus">
+              Áp dụng ngay ưu đãi phí giao dịch chỉ <strong>0.08%</strong> dành
+              cho tài khoản quay lại và phát sinh giao dịch.
+            </li>
+            <li class="li-plus">
+              Đối tượng áp dụng: Các khách hàng đã có tài khoản tại VFS nhưng
+              không phát sinh giao dịch từ 6 tháng trở lên.
+            </li>
+            <li class="li-plus">
+              Thời gian áp dụng:
+              <span class="highlight">18/7/2025 đến 31/10/2025</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- HƯỚNG DẪN -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Hướng Dẫn Nhận
+            Ưu Đãi
+          </h2>
+          <ul>
+            <li class="li-no-dot"><strong>Dành cho khách hàng mới</strong></li>
+            <ul>
+              <li>
+                Tải ứng dụng <span class="highlight">VFS Mobile</span> và mở tài
+                khoản
+              </li>
+              <li>Phát sinh giao dịch để nhận thưởng</li>
+            </ul>
+          </ul>
+          <ul>
+            <li class="li-no-dot">
+              <strong>Dành cho khách hàng đã có tài khoản tại VFS</strong>
+            </li>
+            <ul>
+              <li>
+                Đăng nhập vào ứng dụng
+                <strong>VFS Nobilw</strong> hoặc trang web
+                <strong>VFS Trading</strong>
+              </li>
+              <li>Phát sinh giao dịch để được kích hoạt ưu đãi</li>
+            </ul>
+          </ul>
+        </div>
+
+        <!-- LƯU Ý -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Lưu Ý Quan
+            Trọng
+          </h2>
+          <ul>
+            <li class="li-plus">
+              VFS sẽ chuyển thưởng trực tiếp vào tài khoản chứng khoán khi đủ
+              điều kiện
+            </li>
+            <li class="li-plus">
+              Tài khoản hợp lệ đủ điều kiện chi thưởng là tài khoản đã hoàn tất
+              ký hợp đồng điện tử và không có hành vi gian lận
+            </li>
+            <li class="li-plus">
+              Mỗi khách hàng mới chỉ được nhận thưởng một lần trong thời gian
+              chương trình
+            </li>
+          </ul>
+        </div>
+
+        <!-- LIÊN HỆ -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Liên Hệ Hỗ Trợ
+          </h2>
+          <div class="contact">
+            <ul>
+              <li class="li-plus"><strong>Hội sở Hồ Chí Minh</strong></li>
+              <ul>
+                <li><strong>Hotline:</strong> (+84 28) 6255 6586</li>
+                <li>
+                  <strong>Địa chỉ:</strong> Lầu 1, Số 117-119-121 Nguyễn Du, P.
+                  Bến Thành, TP. Hồ Chí Minh
+                </li>
+              </ul>
+              <li class="li-plus"><strong>Chi nhánh Hà Nội</strong></li>
+              <ul>
+                <li><strong>Hotline:</strong> (+84 24) 3 9288 222</li>
+                <li>
+                  <strong>Địa chỉ:</strong> Tầng 5, Số 37 Bà Triệu, P. Hàng Bài,
+                  Hà Nội
+                </li>
+              </ul>
+              <li class="li-no-dot">
+                <strong>Email:</strong> customercare@vfs.com.vn
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <h2>Quét mã để tải app ngay</h2>
+        <div style="margin: 10px 0">
+          <img src="image/icons/chplay.svg" width="130" alt="QR" />
+          <img src="image/icons/appstore.svg" width="130" alt="QR" />
+        </div>
+
+        <div>
+          <img src="image/intro/qr.jpg" width="280" alt="QR" />
+        </div>
+      </div>
+    </template>
+    <template id="tpl3">
+      <div id="vfs-template">
+        <picture>
+          <source
+            srcset="image/hero/hero3-mobile.jpg"
+            media="(max-width: 768px)"
+          />
+          <img src="image/hero/hero3.png" alt="Hero 2" />
+        </picture>
+        <h1>VFS KEEP - VAY MIỄN LÃI THOÁI MÁI ĐÂU TƯ</h1>
+        <p class="subtitle">
+          Bản nâng cấp mạnh mẽ của chương trình VFS Margin+ với 3 gói vay hấp
+          dẫn, được "may đo, thiết kê" phù hợp với nhu cầu, thị hiếu đầu tư của
+          từng phân khúc khách hàng
+        </p>
+
+        <!-- ƯU ĐÃI KHÁCH HÀNG MỚI -->
+        <section class="section" style="flex-direction: column">
+          <h2 style="align-self: flex-start">
+            <img src="image/logo2.png" height="45" alt="Logo" /> ĐA DẠNG GÓI VAY
+            ĐÁP ỨNG MỌI NHU CẦU
+          </h2>
+          <div class="loan-cards">
+            <div class="loan-card">
+              <h3>GÓI MARGIN T5</h3>
+              <ul>
+                <li>5 ngày đầu: 0%/năm</li>
+                <li>Từ ngày thứ 6 trở đi: 14.2%/năm</li>
+              </ul>
+              <button class="btn btn-register" style="margin: 0 auto">
+                Đăng ký
+              </button>
+            </div>
+
+            <div class="loan-card light">
+              <h3>GÓI MARGIN T7</h3>
+              <ul>
+                <li>5 ngày đầu: 0%/năm</li>
+                <li>Từ ngày thứ 6 trở đi: 14.8%/năm</li>
+              </ul>
+              <button class="btn btn-register dark">Đăng ký</button>
+            </div>
+
+            <div class="loan-card">
+              <h3>GÓI MARGIN T9</h3>
+              <ul>
+                <li>9 ngày đầu: 0%/năm</li>
+                <li>Từ ngày thứ 6 trở đi: 16%/năm</li>
+              </ul>
+              <button class="btn btn-register" style="margin: 0 auto">
+                Đăng ký
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Hướng dẫn đăng
+            ký chương trình
+          </h2>
+          <ul>
+            <li class="li-plus">
+              <strong>Cách 1: Đăng ký trực tiếp</strong>
+            </li>
+            <ul>
+              <li>
+                Khác hàng lựa chọn 1 trong 3 gói Margin phù hợp phía bên trên và
+                nhân nút <strong style="color: orange">Đăng ký</strong>
+              </li>
+
+              <li>
+                Khách hàng <strong style="color: orange">đăng nhập</strong> vào
+                hệ thống bằng tài khoản tại Chứng khoản Nhất Việt
+              </li>
+              <li>
+                Hệ thống sẽ ghi nhận tự động yêu cầu và gửi thông báo về khách
+                hàng
+              </li>
+            </ul>
+            <li class="li-plus"><strong>Cách 2: Nhờ hỗ trợ đăng ký</strong></li>
+            <p style="margin-left: 20px">
+              Khách hàng liên hệ bô phận dịch vụ khách hàng hoặc thông qua đội
+              ngũ môi giới phụ trách
+            </p>
+          </ul>
+        </div>
+
+        <!-- LƯU Ý -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" /> Lưu Ý Quan
+            Trọng
+          </h2>
+          <p style="margin-left: 20px">
+            Khách hàng có thể yêu cầu VFS hủy đăng ký Sản phẩm trong vòng 3 ngày
+            làm việc đầu tiên của tháng kế tiếp. Sau khi hủy thành công toàn bộ
+            dư nợ của các tài khoản vay sẽ áp dụng lãi suât margin thông thường
+            theo biểu giá VFS công bố trên website
+          </p>
+        </div>
+
+        <!-- LIÊN HỆ -->
+        <div class="section">
+          <h2>
+            <img src="image/logo2.png" height="45" alt="Logo" />Liên Hệ Hỗ Trợ
+          </h2>
+          <div class="contact">
+            <ul>
+              <li class="li-plus"><strong>Hội sở Hồ Chí Minh</strong></li>
+              <ul>
+                <li><strong>Hotline:</strong> (+84 28) 6255 6586</li>
+                <li>
+                  <strong>Địa chỉ:</strong> Lầu 1, Số 117-119-121 Nguyễn Du, P.
+                  Bến Thành, TP. Hồ Chí Minh
+                </li>
+              </ul>
+              <li class="li-plus"><strong>Chi nhánh Hà Nội</strong></li>
+              <ul>
+                <li><strong>Hotline:</strong> (+84 24) 3 9288 222</li>
+                <li>
+                  <strong>Địa chỉ:</strong> Tầng 5, Số 37 Bà Triệu, P. Hàng Bài,
+                  Hà Nội
+                </li>
+              </ul>
+              <li class="li-no-dot">
+                <strong>Email:</strong> customercare@vfs.com.vn
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <h2>Quét mã để tải app ngay</h2>
+        <div style="margin: 10px 0">
+          <img src="image/icons/chplay.svg" width="130" alt="QR" />
+          <img src="image/icons/appstore.svg" width="130" alt="QR" />
+        </div>
+
+        <div>
+          <img src="image/intro/qr.jpg" width="280" alt="QR" />
+        </div>
+      </div>
+    </template>
+    <!-- Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-content" id="modalContent">
+        <button class="modal-close">&times;</button>
+      </div>
+    </div>
+  </body>
+</html>
