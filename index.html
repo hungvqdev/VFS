@@ -12,48 +12,49 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo">
-        <img src="image/logo.png" alt="Logo" />
-      </div>
-      <div class="header-buttons">
-        <a href="#" class="btn btn-login">
-          <svg
-            class="svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="12"
-              cy="9"
-              r="3"
-              stroke="currentColor"
-              stroke-width="1.5"
-            ></circle>
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              stroke-width="1.5"
-            ></circle>
-            <path
-              d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            ></path>
-          </svg>
-          Đăng Nhập
-        </a>
-        <a href="#" class="btn btn-register">
-          <svg
-            class="svg"
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M480,1117 C472.268,1117 466,1110.73 466,1103 
+      <div class="container header-content">
+        <div class="logo">
+          <img src="image/logo.png" alt="Logo" />
+        </div>
+        <div class="header-buttons">
+          <a href="#" class="btn btn-login">
+            <svg
+              class="svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="9"
+                r="3"
+                stroke="currentColor"
+                stroke-width="1.5"
+              ></circle>
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="1.5"
+              ></circle>
+              <path
+                d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+            Đăng Nhập
+          </a>
+          <a href="#" class="btn btn-register">
+            <svg
+              class="svg"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M480,1117 C472.268,1117 466,1110.73 466,1103 
            C466,1095.27 472.268,1089 480,1089 
            C487.732,1089 494,1095.27 494,1103 
            C494,1110.73 487.732,1117 480,1117 
@@ -76,43 +77,46 @@
            C486.553,1104 487,1103.55 487,1103 
            C487,1102.45 486.553,1102 486,1102 
            L486,1102 Z"
-              transform="translate(-464 -1087)"
-            ></path>
-          </svg>
-          Mở Tài Khoản
-        </a>
+                transform="translate(-464 -1087)"
+              ></path>
+            </svg>
+            Mở Tài Khoản
+          </a>
+        </div>
       </div>
     </header>
     <section id="hero">
-      <div class="swiper" style="height: 100%">
-        <div class="swiper-hero">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <picture>
-                <source
-                  srcset="image/hero/hero1-mobile.jpg"
-                  media="(max-width: 768px)"
-                />
-                <img src="image/hero/hero1.png" alt="Hero 1" />
-              </picture>
-            </div>
-            <div class="swiper-slide">
-              <picture>
-                <source
-                  srcset="image/hero/hero2-mobile.jpg"
-                  media="(max-width: 768px)"
-                />
-                <img src="image/hero/hero2.png" alt="Hero 1" />
-              </picture>
-            </div>
-            <div class="swiper-slide">
-              <picture>
-                <source
-                  srcset="image/hero/hero3-mobile.jpg"
-                  media="(max-width: 768px)"
-                />
-                <img src="image/hero/hero3.png" alt="Hero 1" />
-              </picture>
+      <div class="container">
+        <div class="swiper" style="height: 100%">
+          <div class="swiper-hero">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="image/hero/hero1-mobile.jpg"
+                    media="(max-width: 768px)"
+                  />
+                  <img src="image/hero/hero1.png" alt="Hero 1" />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="image/hero/hero2-mobile.jpg"
+                    media="(max-width: 768px)"
+                  />
+                  <img src="image/hero/hero2.png" alt="Hero 1" />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="image/hero/hero3-mobile.jpg"
+                    media="(max-width: 768px)"
+                  />
+                  <img src="image/hero/hero3.png" alt="Hero 1" />
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -120,8 +124,12 @@
     </section>
     <section id="about">
       <div class="about-header">
-        <h3>CHÚNG TÔI LÀ</h3>
-        <h2>CHỨNG KHOÁN NHẤT VIỆT (VFS)</h2>
+        <h1 style="color: var(--secondary-color); font-weight: 500">
+          CHÚNG TÔI LÀ
+        </h1>
+        <h1 style="color: var(--primary-color); font-weight: bold">
+          CHỨNG KHOÁN NHẤT VIỆT (VFS)
+        </h1>
         <div class="straight-line"></div>
         <p>
           Thành lập từ năm 2008, Chứng khoán Nhất Việt (VFS) là một trong số
@@ -145,7 +153,7 @@
               />
               <div>
                 <h2>10.000+</h2>
-                <p>Tổng số khách hàng đang phục vụ</p>
+                <p>Tổng số khách hàng cá nhân đang phục vụ</p>
               </div>
             </div>
             <div class="about-box">
@@ -210,13 +218,13 @@
       </div>
     </section>
 
-    <section id="benefits">
+    <section id="benefits" class="container">
       <div class="container">
         <div class="benefits-header">
           <img src="image/logo2.png" alt="" />
           <div>
-            <h3>LỢI ÍCH</h3>
-            <h2>CHỌN NHẤT VIỆT<br />CHỌN ĐỐI TÁC ĐỒNG HÀNH BỀN VỮNG</h2>
+            <h2>LỢI ÍCH</h2>
+            <h1>CHỌN NHẤT VIỆT<br />CHỌN ĐỐI TÁC ĐỒNG HÀNH BỀN VỮNG</h1>
           </div>
         </div>
 
@@ -224,7 +232,9 @@
           <div class="benefit-item">
             <img src="image/icons/hand-cog.svg" alt="hand-cog" />
 
-            <h4>Sản phẩm “may đo” theo từng phong cách đầu tư</h4>
+            <h3 style="height: 50px">
+              Sản phẩm “may đo” theo từng phong cách đầu tư
+            </h3>
             <p>
               “May đo” theo từng phong cách và hành trình đầu tư, chúng tôi mang
               đến những giải pháp vừa vặn, phù hợp với nhu cầu Khách hàng ở từng
@@ -235,17 +245,19 @@
           <div class="benefit-item">
             <img src="image/icons/dollar.svg" alt="Dollar" />
 
-            <h4 style="height: 50px">Tiềm lực tài chính vững vàng</h4>
+            <h3 style="height: 50px">Tiềm lực tài chính vững vàng</h3>
             <p>
               VFS là một trong các công ty chứng khoán có tốc độ tăng trưởng
-              doanh thu nhanh nhất, trung bình đạt 39,8%/năm (từ 2021 - nay)...
+              doanh thu nhanh nhất, trung bình đạt 39,8%/năm (từ 2021 - nay).
+              Đây là nền tảng tài chính vững vàng, giúp khách hàng hoàn toàn yên
+              tâm về sự an toàn và ổn định của tài khoản
             </p>
           </div>
 
           <div class="benefit-item">
             <img src="image/icons/coin.svg" alt="coin" />
 
-            <h4 style="height: 50px">Phí và lãi suất cạnh tranh</h4>
+            <h3 style="height: 50px">Phí và lãi suất cạnh tranh</h3>
             <p>
               VFS có mức phí giao dịch cùng lãi suất vay cạnh tranh tốt hàng đầu
               thị trường...
@@ -254,7 +266,7 @@
 
           <div class="benefit-item">
             <img src="image/icons/award.svg" alt="award" />
-            <h4 style="height: 50px">Đội ngũ chuyên gia tư vấn đồng hành</h4>
+            <h3 style="height: 50px">Đội ngũ chuyên gia tư vấn đồng hành</h3>
             <p>
               VFS sở hữu đội ngũ chuyên gia tư vấn đồng hành trong toàn bộ quá
               trình đầu tư...
@@ -263,7 +275,7 @@
         </div>
       </div>
     </section>
-    <section id="promo">
+    <section id="promo" class="container">
       <div class="promo-content">
         <h3>QUÀ TẶNG BẠN MỚI</h3>
         <h2>ĐẦU TƯ THÔNG MINH<br />ĐÓN SÓNG TÀI CHÍNH CÙNG VFS</h2>
@@ -286,8 +298,8 @@
     <section id="products">
       <div class="container">
         <div class="product-header">
-          <h3>VFS INVEST 2025</h3>
-          <h2>BỘ SẢN PHẨM ĐỒNG HÀNH TĂNG TRƯỞNG TÀI CHÍNH</h2>
+          <h2>VFS INVEST 2025</h2>
+          <h1>BỘ SẢN PHẨM ĐỒNG HÀNH TĂNG TRƯỞNG TÀI CHÍNH</h1>
           <div class="straight-line"></div>
         </div>
         <div class="products-grid container">
@@ -343,7 +355,7 @@
 
     <section id="intro">
       <div class="intro-title-1">
-        <h2 style="text-align: center">BẠN LÀ KHÁCH HÀNG MỚI?</h2>
+        <h2>BẠN LÀ KHÁCH HÀNG MỚI?</h2>
         <div class="description-intro">
           <p>MỞ TÀI KHOẢN ĐỂ GIAO DỊCH NGAY SAU 5 PHÚT</p>
           <p>CẬP NHẬT LIÊN TỤC CÁC BẢN TIN TƯ VẤN ĐẦU TƯ & NHẬN NHIỀU ƯU ĐÃI</p>
@@ -370,7 +382,7 @@
 
             <p>Tải ứng dụng VFS Mobile</p>
           </div>
-          <div style="padding: 20px 0px 5px 5px; width: 70%">
+          <div style="padding: 20px 0px 5px 5px">
             <span class="parent-icons-intro">02</span>
             <p>Truy cập ứng dụng & chọn mở tài khoản</p>
           </div>
@@ -419,10 +431,10 @@
             margin-top: 0 !important;
           "
         >
-          <div style="padding: 20px 5px 5px 12px; width: 167px !important">
+          <div style="padding: 20px 5px 10px 12px; width: 167px !important">
             <p>Tải ứng dụng VFS Mobile</p>
           </div>
-          <div style="padding: 20px 12px 5px 5px; width: 167px !important">
+          <div style="padding: 20px 12px 10px 5px; width: 167px !important">
             <p>Truy cập ứng dụng & chọn mở tài khoản</p>
           </div>
         </div>
@@ -439,15 +451,15 @@
           class="intro-content intro-content-des"
           style="margin-bottom: 40px; grid-template-columns: repeat(3, 1fr)"
         >
-          <div style="padding: 20px 0px 5px 5px">
+          <div style="padding: 20px 0px 10px 0px">
             <span class="parent-icons-intro">03</span>
             <p>Hoàn thiện thông tin cá nhân</p>
           </div>
-          <div style="padding: 20px 10px 5px 10px">
+          <div style="padding: 20px 10px 10px 10px">
             <span class="parent-icons-intro">04</span>
             <p>Ký hợp đồng điện tử</p>
           </div>
-          <div style="padding: 20px 5px 5px 5px">
+          <div style="padding: 20px 5px 10px 5px">
             <span class="parent-icons-intro">05</span>
             <p>Giao dịch ngay</p>
           </div>
@@ -464,16 +476,16 @@
             </p>
           </div>
           <div>
-            <img src="image/icons/chplay.svg" width="130" alt="QR" />
-            <img src="image/icons/appstore.svg" width="130" alt="QR" />
+            <img src="image/icons/chplay.svg" width="140" alt="QR" />
+            <img src="image/icons/appstore.svg" width="140" alt="QR" />
           </div>
         </div>
         <div>
-          <img src="image/intro/qr.jpg" width="280" alt="QR" />
+          <img src="image/intro/qr.jpg" class="qr" alt="QR" />
         </div>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="container">
       <div class="form-box">
         <h3>NẾU CẦN THÊM THÔNG TIN</h3>
         <p>VUI LÒNG ĐỂ LẠI THÔNG TIN, CHÚNG TÔI SẼ HỖ TRỢ BẠN</p>
@@ -486,7 +498,7 @@
         </form>
       </div>
     </section>
-    <footer id="footer">
+    <footer id="footer" class="container">
       <div class="footer-desktop">
         <div class="container">
           <div class="footer-content">

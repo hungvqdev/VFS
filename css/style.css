@@ -9,22 +9,27 @@
   font-family: "StavianBold";
   src: url("../font/Stavian-Bold.ttf") format("truetype");
 }
+
+:root {
+  --primary-color: #f26f21;
+  --secondary-color: #1f2251;
+  --bg-color: #fff4ee;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "StavianRegular", sans-serif;
 }
 
 html,
 body {
-  font-family: "StavianRegular", sans-serif;
   margin: 0;
   padding: 0;
   overflow-y: scroll;
   scrollbar-width: none;
   scroll-snap-type: y mandatory;
-  background-color: #fff4ee;
+  background-color: var(--bg-color);
 }
 
 html::-webkit-scrollbar,
@@ -39,15 +44,18 @@ body::-webkit-scrollbar {
 }
 
 .header {
+  position: fixed;
+  background-color: var(--secondary-color);
+  padding: 20px;
   width: 100%;
   height: 90px;
-  position: fixed;
-  background-color: #1f2251;
-  padding: 20px;
+  z-index: 1000;
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
 }
 
 .logo img {
@@ -103,27 +111,23 @@ body::-webkit-scrollbar {
 }
 
 .btn-login {
-  color: #f37021;
-  border: 2px solid #f37021;
+  color: var(--primary-color);
   background: #fff;
 }
 
 .btn-login:hover {
-  background: #f37021;
-  border-color: #f37021;
+  background: var(--primary-color);
   color: #fff;
 }
 
 .btn-register {
-  background: #f37021;
+  background: var(--primary-color);
   color: #fff;
-  border: 2px solid #f37021;
 }
 
 .btn-register:hover {
   background: #fff;
-  border-color: 2px solid #f37021;
-  color: #f37021;
+  color: var(--primary-color);
 }
 
 .svg {
@@ -151,8 +155,8 @@ body::-webkit-scrollbar {
 .btn-register:hover .svg:visited,
 .btn-register:hover .svg:active,
 .btn-register:hover .svg:focus {
-  fill: #f37021;
-  stroke: #f37021;
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
 }
 
 .btn-parallelogram {
@@ -200,7 +204,6 @@ section {
 #hero {
   height: auto;
   width: 100%;
-  padding: 15px 50px;
   padding-top: 110px;
 }
 
@@ -219,6 +222,10 @@ section {
   border-radius: 25px;
 }
 
+#hero .container {
+  padding: 0 100px;
+}
+
 #about {
   padding: 40px 0;
   flex-direction: column;
@@ -229,14 +236,6 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.about-header h2 {
-  color: #f37021;
-}
-
-.about-header h3 {
-  color: #1c2340;
 }
 
 .about-header p {
@@ -251,18 +250,20 @@ section {
 }
 
 .about-content-left {
-  width: 45%;
+  width: 42%;
+  overflow: hidden;
 }
 
 .about-content-left img {
-  width: 100%;
+  width: 115%; /* phóng to = 100 / 0.9 (để 90% ảnh phủ đủ 100% wrapper) */
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: left center;
 }
 
 .about-content-right {
   display: flex;
-  width: 55%;
+  width: 58%;
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-end;
@@ -290,6 +291,7 @@ section {
 
 .about-grid-icon {
   width: 60px;
+  align-self: start;
 }
 
 .about-grid-icon img {
@@ -314,7 +316,7 @@ section {
 }
 
 #benefits {
-  background: #1d2753;
+  background: var(--secondary-color);
   /* màu xanh đậm */
   color: #fff;
   padding: 60px 20px;
@@ -327,6 +329,12 @@ section {
   text-align: left;
   margin-bottom: 40px;
   align-items: center;
+}
+
+.benefits-header h1 {
+  font-weight: bold;
+  margin: 6px 0 0;
+  color: var(--primary-color);
 }
 
 .benefits-grid {
@@ -357,11 +365,10 @@ section {
   margin-bottom: 10px;
 }
 
-.benefit-item h4 {
-  font-size: 16px;
-  font-weight: 700;
+.benefit-item h3 {
+  font-weight: bold;
   margin-bottom: 10px;
-  color: #1d2753;
+  color: var(--secondary-color);
 }
 
 .benefit-item p {
@@ -370,7 +377,7 @@ section {
 }
 
 #promo {
-  background: url("../image/bg-promo.jpg") no-repeat center center;
+  background: url("../image/bg-promo.png") no-repeat center center;
   background-size: contain;
   /* giữ nguyên tỉ lệ, không crop */
   width: 100%;
@@ -395,7 +402,7 @@ section {
 }
 
 .promo-content h2 {
-  color: #f36f21;
+  color: var(--primary-color);
   font-weight: 600;
   line-height: 28px;
 }
@@ -428,7 +435,7 @@ section {
 .promo-box div .money {
   width: max-content;
   padding: 0 10px;
-  color: #f37021;
+  color: var(--primary-color);
 }
 
 .white-line {
@@ -445,20 +452,23 @@ section {
   width: 100%;
   padding: 40px 0;
   gap: 13px;
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
 #intro h2 {
   font-weight: 600;
-  color: #f37021;
+  color: var(--primary-color);
   line-height: 28px;
 }
 
-#intro div p {
-  color: #1f2251;
+.description2-intro {
+  color: var(--secondary-color);
+  margin: 10px 0;
 }
 
 #intro .desktop img {
-  width: 180px;
+  width: 177px;
 }
 
 #intro .mobile {
@@ -513,9 +523,9 @@ section {
 }
 
 .intro-title-2 div {
-  max-width: 400px;
+  max-width: 300px;
   text-align: left;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .parent-icons-intro {
@@ -525,7 +535,7 @@ section {
   transform: translateX(-50%);
   width: 25px;
   height: 25px;
-  background: #f37021;
+  background: var(--primary-color);
   border-radius: 50%;
   color: #fff;
   display: flex;
@@ -538,28 +548,25 @@ section {
   background: #fff6f2;
 }
 
-.product-header,
-.about-header {
+.product-header {
   padding-bottom: 40px;
 }
 
-.product-header h2,
-.about-header h2 {
+.product-header h1 {
   margin: 5px 0 15px 0;
-  font-weight: 600;
+  font-weight: bold;
+}
+
+.product-header h1 {
+  color: var(--secondary-color);
 }
 
 .product-header h2 {
-  color: #1c2340;
-}
-
-.product-header h3,
-.about-header h3 {
   font-weight: 400;
 }
 
-.product-header h3 {
-  color: #f37021;
+.product-header h2 {
+  color: var(--primary-color);
 }
 
 #products .container {
@@ -569,7 +576,7 @@ section {
 
 /* Headings */
 #products .subheading {
-  color: #ff6600;
+  color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -584,7 +591,7 @@ section {
 .product-card .line {
   width: 10px;
   height: 140px;
-  background: #ff6600;
+  background: var(--primary-color);
   border-radius: 2px;
   bottom: 0px;
   left: 0;
@@ -654,7 +661,7 @@ section {
 }
 
 .product-card .content button {
-  color: #ff6600;
+  color: var(--primary-color);
   font-weight: 600;
   text-decoration: none;
   background: none;
@@ -723,12 +730,12 @@ section {
 }
 
 .swiper-navBtn {
-  color: #f37021;
+  color: var(--primary-color);
   transition: color 0.3s ease;
 }
 
 .swiper-navBtn:hover {
-  color: #f37021;
+  color: var(--primary-color);
 }
 
 .swiper-navBtn::before,
@@ -750,7 +757,7 @@ section {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #f37021;
+  background-color: var(--primary-color);
 }
 
 #contact {
@@ -768,7 +775,7 @@ section {
   max-width: 95%;
   background: #fff;
   border-radius: 16px;
-  padding: 40px 30px;
+  padding: 50px;
   text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
@@ -790,7 +797,7 @@ section {
 /* Input */
 .form-box input {
   width: 100%;
-  padding: 12px 18px;
+  padding: 18px;
   margin-bottom: 18px;
   border: 1px solid #ddd;
   border-radius: 30px;
@@ -801,12 +808,12 @@ section {
 }
 
 .form-box input:focus {
-  border-color: #f15a29;
+  border-color: var(--primary-color);
   /* viền cam khi focus */
 }
 
 .form-box button {
-  background: #f15a29;
+  background: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -817,6 +824,7 @@ section {
   transition: background 0.3s ease;
   width: 200px;
   height: 50px;
+  margin-top: 10px;
 }
 
 .form-box button:hover {
@@ -833,7 +841,7 @@ section {
 .footer-content {
   display: flex;
   justify-content: space-between;
-  padding: 43px 0;
+  padding: 50px;
   color: #fff;
   height: 100%;
 }
@@ -876,7 +884,7 @@ section {
 }
 
 .footer-right .mail .box {
-  background-color: #f37021;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -903,8 +911,6 @@ section {
 
 /* modal-content: 600x800 */
 .modal-content {
-  width: 900px;
-  height: 800px;
   overflow-y: auto;
   max-width: calc(100% - 40px);
   max-height: calc(100% - 40px);
@@ -1072,7 +1078,7 @@ button {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #e85d2a;
+  background-color: var(--primary-color);
   color: #fff;
   font-weight: bold;
   border: none;
@@ -1081,8 +1087,8 @@ button {
 }
 
 #vfs-template .btn-register.dark {
-  background-color: #1c2340;
-  border: 2px solid #1c2340;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   color: #fff;
   margin: 0 auto;
 }
@@ -1107,12 +1113,12 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-  .header {
+  .header-content {
     height: 48px;
     padding: 15px;
   }
 
-  .header .logo img {
+  .header-content .logo img {
     width: 60px;
     height: 25px;
   }
@@ -1184,20 +1190,18 @@ button {
   }
 
   .benefits-header img {
-    width: 100px;
-  }
-
-  .benefits-header h3 {
-    font-size: 15px;
+    max-width: 110px;
   }
 
   .benefits-header h2 {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 17px;
+  }
+
+  .benefits-header h1 {
+    font-size: 22px;
     margin: 6px 0 0;
     line-height: 1.2;
   }
-
   .benefit-item img {
     height: 44px;
   }
@@ -1211,10 +1215,31 @@ button {
     background-repeat: no-repeat;
   }
 
+  .promo-content h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+
+  .product-header h1,
+  .promo-content h2 {
+    font-size: 27px;
+    line-height: 30px;
+  }
+
+  .product-header h1,
+  .promo-content h2 {
+    font-size: 27px;
+    line-height: 30px;
+  }
+
+  .promo-content h2 {
+    max-width: 300px;
+  }
+
   .promo-content {
     width: 100%;
     align-items: center;
-    padding: 20px 20px 100px 20px;
+    padding: 20px 20px 170px 20px;
   }
 
   .promo-content h2 {
@@ -1223,7 +1248,7 @@ button {
 
   .promo-box div .text {
     width: 70px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .promo-box div .money {
@@ -1232,26 +1257,43 @@ button {
   }
 
   .btn-parallelogram {
+    width: 240px;
+    height: 50px;
     margin-left: auto;
+    font-size: 24px;
   }
 
   #hero {
+    padding: 60px 0 0 0;
+  }
+
+  #hero .container {
     padding: 0;
     height: auto;
   }
 
   #hero .swiper-slide img {
     aspect-ratio: auto;
-    border-radius: 0;
+    border-radius: 15px;
   }
 
   .about-header {
     padding-bottom: 0;
   }
 
+  .about-header h1 {
+    font-size: 24px;
+    max-width: 300px;
+  }
+
+  .straight-line {
+    margin: 15px auto 0 auto;
+  }
+
   .about-grid {
+    margin-top: 10px;
     padding: 10px;
-    gap: 5px;
+    gap: 15px;
   }
 
   .about-grid .about-box {
@@ -1259,8 +1301,14 @@ button {
     max-width: 180px;
   }
 
+  #intro h2,
   .about-grid .about-box div h2 {
-    font-size: 21px;
+    font-size: 24px;
+    padding-bottom: 5px;
+  }
+
+  #intro div p {
+    font-size: 15px;
   }
 
   .about-grid .about-box div p {
@@ -1269,8 +1317,6 @@ button {
 
   .about-grid-icon {
     width: 30px;
-    align-self: start;
-    padding-top: 5px;
   }
 
   .about-flex {
@@ -1289,11 +1335,6 @@ button {
   .products-grid,
   .benefits-grid {
     grid-template-columns: 1fr;
-  }
-
-  .product-header h2,
-  .about-header h2 {
-    max-width: 320px;
   }
 
   .product-card {
@@ -1384,12 +1425,8 @@ button {
     max-width: 350px;
   }
 
-  .intro-content {
-    gap: 10px;
-  }
-
   .footer-desktop {
-    height: 380px;
+    height: 350px;
   }
 
   .footer-content {
@@ -1455,33 +1492,18 @@ button {
   #vfs-template {
     padding: 10px;
   }
+
+  .qr {
+    width: 280px;
+  }
 }
 
 @media (min-width: 768px) {
-  .container {
-    max-width: 768px;
+  .qr {
+    width: 180px;
   }
-
-  #intro .desktop img {
-    width: 150px;
-  }
-
-  .intro-content {
-    gap: 10px;
-  }
-
-  .promo-box div .text {
-    width: 110px;
-    font-size: 17px;
-  }
-
-  .promo-box div .money {
-    height: 50px;
-    font-size: 55px;
-  }
-
-  .benefits-header img {
-    width: 120px;
+  #hero .container {
+    padding: 0 50px;
   }
 }
 
@@ -1492,6 +1514,22 @@ button {
 
   .about-content-left {
     width: 100%;
+  }
+
+  .benefits-header img {
+    width: 150px;
+  }
+
+  #benefits {
+    padding: 50px 100px;
+  }
+
+  .about-content-left img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
   }
 
   .about-content-right {
@@ -1530,16 +1568,12 @@ button {
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
-    padding-left: 35px;
-    padding-right: 35px;
   }
 }
 
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   .promo-box div .text {
@@ -1559,108 +1593,124 @@ button {
   .benefits-header img {
     width: 200px;
   }
-
-  .benefits-header h3 {
-    font-size: 15px;
-  }
-
-  .benefits-header h2 {
-    font-size: 20px;
-    font-weight: 400;
-    margin: 6px 0 0;
-    line-height: 1.2;
-    color: #f26522;
-  }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1440px) {
   .container {
-    max-width: 1536px;
-  }
-
-  #intro .desktop img {
-    width: 245px;
+    max-width: 1440px;
   }
 
   .intro-content-des div {
-    width: 200px;
+    width: 100%;
   }
 
-  #intro div p {
+  .intro-content-des p {
     font-size: 14px;
   }
 
-  #promo {
-    margin: 0 auto;
-    max-width: 1536px;
+  .straight-line {
+    margin: 15px auto;
   }
-}
 
-@media (min-width: 1920px) {
   .about-grid {
-    gap: 45px;
-    padding-bottom: 40px;
+    gap: 40px;
   }
   .about-grid .about-box {
-    max-width: 400px;
-    gap: 30px;
-  }
-
-  .about-grid-icon {
-    width: 80px;
-  }
-  .about-grid-icon img {
-    width: 50px !important;
+    max-width: 350px;
   }
 
   .about-grid .about-box div h2 {
-    font-size: 35px;
+    font-size: 30px;
+    margin-bottom: 5px;
   }
 
   .about-grid .about-box div p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .about-flex {
-    max-width: 800px;
-    padding: 30px 0 10px 0;
+    max-width: 740px;
+    padding: 30px 0;
   }
 
   .about-flex-icon {
     height: 50px;
   }
 
-  #promo {
-    margin: 0 auto;
-    max-width: 1920px;
+  .msb {
+    width: 110px;
+    overflow: hidden;
+  }
+
+  .msb img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .benefits-grid {
+    gap: 30px;
+  }
+
+  .benefit-item {
+    max-width: 280px;
+  }
+
+  .benefits-header h1 {
+    font-size: 35px;
+  }
+
+  .benefits-header img {
+    width: 250px;
+  }
+
+  .product-header h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .product-header h2 {
+    font-size: 28px;
   }
 
   .promo-box {
-    padding: 20px;
-    margin: 55px 0;
+    margin: 50px 0;
   }
 
   .promo-content h3 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .promo-content h2 {
-    line-height: 50px;
-    font-size: 40px;
-  }
-
-  .promo-box div .text {
-    width: 175px;
-    font-size: 29px;
+    font-size: 35px;
+    line-height: 40px;
   }
 
   .promo-box div .money {
-    font-size: 100px;
+    height: 75px;
+    font-size: 75px;
+    padding: 0 20px;
+  }
+
+  .promo-box div .text {
+    font-size: 24px;
+  }
+
+  .intro-title-1 h2 {
+    font-size: 30px;
+  }
+
+  .description-intro,
+  .form-box h3 {
+    font-size: 20px;
   }
 
   .btn-parallelogram {
-    width: 300px;
-    height: 60px;
-    font-size: 20px;
+    width: 280px;
+    height: 52px;
+    font-size: 24px;
+  }
+
+  .footer-content {
+    padding: 50px 100px;
   }
 }
