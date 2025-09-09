@@ -186,6 +186,20 @@ body::-webkit-scrollbar {
   transform: skew(30deg);
 }
 
+.btn-box {
+  width: 180px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
 .straight-line {
   width: 120px;
   height: 4px;
@@ -459,7 +473,7 @@ section {
 }
 
 .promo-box div .text {
-  width: 100px;
+  width: 120px;
   font-size: 17px;
 }
 
@@ -934,15 +948,12 @@ section {
   align-items: center;
 }
 
-/* modal-content: 600x800 */
 .modal-content {
-  max-height: 700px;
   overflow-y: auto;
-  max-width: calc(100% - 40px);
+  max-height: calc(100% - 120px);
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-  padding: 20px;
   box-sizing: border-box;
   transform: translateY(12px) scale(0.98);
   opacity: 0;
@@ -960,9 +971,10 @@ section {
 }
 
 .modal-close {
-  position: absolute;
+  position: sticky;
   top: 8px;
-  right: 8px;
+  margin-left:auto;
+  margin-right: 5px;
   background: none;
   border: none;
   font-size: 20px;
@@ -999,7 +1011,7 @@ button {
   line-height: 1.6;
   color: #1c2340;
   background: #fff;
-  padding: 20px;
+  padding: 0 30px 30px 30px;
   max-width: 900px;
   margin: auto;
 }
@@ -1165,7 +1177,6 @@ button {
     gap: 8px;
   }
 
-  /* Base button */
   .btn {
     width: 100px;
     height: 20px;
@@ -1532,9 +1543,7 @@ button {
   }
 
   .modal-content {
-    max-height: calc(100% - 80px);
     max-width: calc(100% - 40px);
-    padding: 30px 10px 10px 10px;
     margin: 20px;
   }
 
@@ -1752,4 +1761,17 @@ button {
   .footer-content {
     padding: 50px 100px;
   }
+}
+
+@media (min-height: 1024px) {
+  .modal-content {
+    max-height: calc(100vh - 200px);
+  }
+}
+
+@media (min-height: 1440px) {
+  .modal-content {
+    max-height: 860px;
+  }
+  
 }
