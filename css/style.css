@@ -90,8 +90,6 @@ body::-webkit-scrollbar {
 
 /* Base button */
 .btn {
-  width: 140px;
-  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,6 +101,8 @@ body::-webkit-scrollbar {
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  border: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn img.icon {
@@ -111,23 +111,21 @@ body::-webkit-scrollbar {
 }
 
 .btn-login {
+  width: 140px;
+  height: 30px;
   color: var(--primary-color);
   background: #fff;
 }
-
 .btn-login:hover {
   background: var(--primary-color);
   color: #fff;
 }
 
 .btn-register {
+  width: 140px;
+  height: 30px;
   background: var(--primary-color);
   color: #fff;
-}
-
-.btn-register:hover {
-  background: #fff;
-  color: var(--primary-color);
 }
 
 .svg {
@@ -950,7 +948,7 @@ section {
 
 .modal-content {
   overflow-y: auto;
-  max-height: calc(100% - 120px);
+  max-height: calc(100% - 100px);
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
@@ -973,7 +971,7 @@ section {
 .modal-close {
   position: sticky;
   top: 8px;
-  margin-left:auto;
+  margin-left: auto;
   margin-right: 5px;
   background: none;
   border: none;
@@ -1080,11 +1078,6 @@ button {
   margin: 2px 0;
 }
 
-#vfs-template .orange {
-  color: #e8591c;
-  font-weight: bold;
-}
-
 #vfs-template .loan-cards {
   display: flex;
   gap: 10px;
@@ -1123,24 +1116,56 @@ button {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: var(--primary-color);
-  color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
 
-#vfs-template .btn-register.dark {
+.orange {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.orange:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.dark {
   background-color: var(--secondary-color);
-  border: 2px solid var(--secondary-color);
   color: #fff;
   margin: 0 auto;
 }
 
-#vfs-template .btn-register.dark:hover {
+.dark:hover {
   background-color: #33417a;
-  border: 2px solid #33417a;
+}
+
+.popup-template {
+  padding: 70px 30px;
+}
+
+.popup-template img {
+  margin: 0 auto 50px;
+  display: block;
+  width: 150px;
+}
+
+.btn-modal {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+}
+
+.btn-forget {
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.btn-forget:hover {
+  color: #b0aeae;
 }
 
 .msb {
@@ -1161,6 +1186,77 @@ button {
   display: none;
 }
 
+.input-line {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 4px;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  color: #222;
+  margin-bottom: 20px;
+}
+.input-line:focus {
+  border-bottom: 2px solid var(--primary-color);
+}
+.app-info {
+  display: flex;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+.app-info p {
+  width: 230px;
+  font-size: 18px;
+}
+
+.app-info img {
+  width: 130px;
+  margin: 0;
+}
+
+.app-links {
+  display: flex;
+  gap: 10px;
+}
+
+.app-links img {
+  width: 130px;
+  margin: 30px 0 0 0;
+}
+
+.sub-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-close {
+  color: black;
+}
+
+.color-close:hover {
+  color: #FFF;
+}
+
+.sub-modal .modal-content {
+  max-height: calc(100% - 100px);
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+.sub-modal.show .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media screen and (max-width: 768px) {
   .header-content {
     height: 48px;
@@ -1178,12 +1274,16 @@ button {
   }
 
   .btn {
-    width: 100px;
-    height: 20px;
     gap: 3px;
     font-size: 10px;
     font-weight: 400;
     border-radius: 4px;
+  }
+
+  .btn-login,
+  .btn-register {
+    width: 100px;
+    height: 20px;
   }
 
   .btn img.icon {
@@ -1554,6 +1654,53 @@ button {
   .qr {
     width: 280px;
   }
+
+  .btn-modal {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .btn-forget {
+    margin-bottom: 15px;
+  }
+
+  .popup-template {
+    padding: 40px 20px;
+    width: 100%;
+  }
+
+  .popup-template img {
+    margin: 0 auto 40px;
+    display: block;
+    width: 120px;
+  }
+
+  .app-info {
+    gap: 0;
+    margin: 30px 0;
+  }
+  .app-info div {
+    flex: 1;
+  }
+
+  .app-info p {
+    width: 160px;
+    font-size: 14px;
+  }
+
+  .app-info img {
+    width: 100px;
+    margin: 0;
+  }
+
+  .app-links {
+    gap: 5px;
+  }
+
+  .app-links img {
+    width: 90px;
+    margin: 20px 0 0 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1765,7 +1912,7 @@ button {
 
 @media (min-height: 1024px) {
   .modal-content {
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 150px);
   }
 }
 
@@ -1773,5 +1920,4 @@ button {
   .modal-content {
     max-height: 860px;
   }
-  
 }
