@@ -1,38 +1,13 @@
-var swiper = new Swiper(".slider-content", {
-  slidesPerView: 4, // mặc định desktop
-  spaceBetween: 25,
-  loop: true,
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    0: {
-      // mobile
-      slidesPerView: 1,
-    },
-    768: {
-      // tablet (>=768px)
-      slidesPerView: 2,
-    },
-    1200: {
-      // desktop (>=1200px)
-      slidesPerView: 4,
-    },
-  },
-});
-
 var swiper = new Swiper(".swiper-hero", {
   loop: true,
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
+  },
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
   },
   allowTouchMove: true,
   slidesPerView: 1,

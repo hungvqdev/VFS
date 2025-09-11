@@ -37,6 +37,14 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+button:disabled,
+button:hover:disabled {
+  background-color: #898989;
+  color: #fff;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -780,21 +788,21 @@ section {
   font-size: 40px;
 }
 
-.swiper-pagination-bullet-active-next {
-  background-color: #fff;
+.swiper-pagination {
+  bottom: 30px !important;
 }
 
-.swiper-pagination-bullet-active-prev {
-  background-color: #fff;
-}
-
-.swiper-pagination.bullet {
+.swiper-pagination-bullet {
+  background-color: #ccc;
+  width: 35px;
+  height: 8px;
+  border-radius: 4px;
   opacity: 1;
-  bottom: 100px !important;
+  margin: 0 !important
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--primary-color);
+  background-color: #fff;
 }
 
 #contact {
@@ -1240,7 +1248,7 @@ button {
 }
 
 .color-close:hover {
-  color: #FFF;
+  color: #fff;
 }
 
 .sub-modal .modal-content {
